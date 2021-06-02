@@ -27,6 +27,9 @@
 //
 // const fs = require('fs');
 // const mnemonic = fs.readFileSync(".secret").toString().trim();
+const HDWalletProvider = require("truffle-hdwallet-provider");
+const infuraKey = "44f587c602894a2683f13b3ff3f076a7";
+const mnemonic = "throw fetch husband east solve security warm minimum resemble clutch reflect young";
 module.exports = {
   /**
    * Networks define how you connect to your ethereum client and let you set the
@@ -47,7 +50,7 @@ module.exports = {
     //
     development: {
       host: "127.0.0.1", // Localhost (default: none)
-      port: 7545, // Standard Ethereum port (default: none)
+      port: 9545, // Standard Ethereum port (default: none)
       network_id: "*", // Any network (default: none)
       gas: 0,
       gasPrice: 0,
@@ -56,14 +59,19 @@ module.exports = {
 
     // Another network with more advanced options...
     advanced: {
-      port: 7545, // Custom port
+      port: 9545, // Custom port
       network_id: "*", // Custom network
-      // gas: 8500000,           // Gas sent with each transaction (default: ~6700000)
-      // gasPrice: 20000000000,  // 20 gwei (in wei) (default: 100 gwei)
+      gas: 0, // Gas sent with each transaction (default: ~6700000)
+      gasPrice: 0, // 20 gwei (in wei) (default: 100 gwei)
       // from: <address>,        // Account to send txs from (default: accounts[0])
       websockets: true, // Enable EventEmitter interface for web3 (default: false)
     },
-
+    rinkeby: {
+      provider: () => new HDWalletProvider(mnemonic, `https://rinkeby.infura.io/v3/${infuraKey}`),
+      network_id: 4, // rinkeby's id
+      gas: 4500000, // rinkeby has a lower block limit than mainnet
+      gasPrice: 10000000000,
+    },
     // Useful for deploying to a public network.
     // NB: It's important to wrap the provider as a function.
     // ropsten: {

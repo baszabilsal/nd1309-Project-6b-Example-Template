@@ -2664,40 +2664,21 @@
     "version": "0.4.26+commit.4563c3fc.Emscripten.clang"
   },
   "networks": {
-    "5777": {
-      "events": {
-        "0x71ae26cad02663e3d92efd6ec56031a80d74a20c0ab4183faa8bf262261c9baa": {
-          "anonymous": false,
-          "inputs": [
-            {
-              "indexed": true,
-              "name": "account",
-              "type": "address"
-            }
-          ],
-          "name": "RetailerAdded",
-          "type": "event"
-        },
-        "0xdb7176e79cffef81cb01767dd0447a0b24bb72ca9778d4b245581086b2a7e6db": {
-          "anonymous": false,
-          "inputs": [
-            {
-              "indexed": true,
-              "name": "account",
-              "type": "address"
-            }
-          ],
-          "name": "RetailerRemoved",
-          "type": "event"
-        }
-      },
+    "4": {
+      "events": {},
       "links": {},
-      "address": "0xe11D2B07D0870727241c5DB5F560fDF348B52167",
-      "transactionHash": "0xd35b0e8cbb58e22a889e1ea909141f65868808c394c488d83716a1ae4a86cb73"
+      "address": "0x2A84d468601265cdc3C5C55D2c2d10cd097433Cc",
+      "transactionHash": "0xd8b386d7e9367a845fd562e65d932e7a3a908d67ab9fce318576552216851dfc"
+    },
+    "5777": {
+      "events": {},
+      "links": {},
+      "address": "0x21caCC8174A7C93e0F1de131e1ea6F28d4784eea",
+      "transactionHash": "0xcaaa2d8a872b9bc065d9884e542cbbd8dd75056d9b445fffbfee602177d6a8b0"
     }
   },
   "schemaVersion": "3.4.1",
-  "updatedAt": "2021-05-25T20:40:21.221Z",
+  "updatedAt": "2021-06-02T14:35:46.304Z",
   "networkType": "ethereum",
   "devdoc": {
     "methods": {}
